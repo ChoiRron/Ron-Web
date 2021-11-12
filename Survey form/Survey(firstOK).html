@@ -39,33 +39,50 @@
             <option value="5">Nobody</option>
         </select>
 
-        <best id="best">
-            <h2>Which option best describes your current role?</h2>
-            <!-- <input id="role" type="text" name="select current role-firld" placeholder="select current role">
-        <style>
-        </style> -->
-            <div>
-                <!-- <label for="options"><h4>Options</h4></label> -->
-                <select id="options" name="options">
-                    <option value="1">Superman</option>
-                    <option value="2">Spiderman</option>
-                    <option value="3">Captin america</option>
-                    <option value="4">Batman</option>
-                    <option value="5">Nobody</option>
-                </select>
-            </div>
-
-            <would id="would">
-                <h2>Would you recommend freeCodeCamp to a friend?</h2>
-                </what>
-                <label for="yes">Yes</label>
-                <input id="yes" name="gender" type="radio" value="yes">
-                <label for="no">No</label>
-                <input id="no" name="gender" type="radio" value="no">
-                <label for="maybe">Maybe</label>
-                <input id="maybe" name="gender" type="radio" value="maybe">
-            </would>
-        </best>
+        <div class="recommend-int">
+            Would you recommend freeCodeCamp to a friend?
+        </div>
+        <div class="radio-sel">
+            <input id="yes" name="gender" type="radio" value="yes">
+            <label for="yes">Yes</label>
+        </div>
+        <div class="radio-sel">
+            <input id="no" name="gender" type="radio" value="no">
+            <label for="no">No</label>
+        </div>
+        <div class="radio-sel">
+            <input id="maybe" name="gender" type="radio" value="maybe">
+            <label for="maybe">Maybe</label>
+        </div>
+        
+        <div class="fav-int">
+            What is your favourite feature of freeCodeCamp?
+        </div>
+        <select class="fav-select">
+            <option value="1">feature 1</option>
+            <option value="2">feature 2</option>
+            <option value="3">feature 3</option>
+            <option value="4">feature 4</option>
+            <option value="5">feature 5</option>
+        </select>
+        
+        <div class="improve-hint">
+            What would you like to see improved? (Check all that apply)
+        </div>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Front-end Projects</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Back-end Projects</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Data Visualization</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Challenges</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Open Source Community</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Gitter help rooms</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Videos</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">City Meetups</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Wiki</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Forum</label>
+        <label class="imporve-label"><input name="improve-input" type="checkbox" value="">Additional Courses</label>
+        
+        <div class="suggestion">Any comments or suggestions?</div>
+        <textarea class="comments" rows="5" cols="80" placeholder="Enter your comments here..."></textarea>
     </container>
     <style>
         body {
@@ -96,7 +113,7 @@
             /* position: absolute; */
             /* top: 100px;
             left: 400px; */
-            height: 1000px;
+            height: 1500px;
             width: 675px;
         }
         .name-hint,.email-hint,.age-hint {
@@ -127,6 +144,54 @@
             text-align: left;
             padding-left: 4px;
         }
+        .recommend-int {
+            margin-top: 40px;
+            margin-left: 40px;
+            height: 35px;
+            color: white;
+        }
+        .radio-sel {
+            flex-direction: row;
+            margin-top: 10px;
+            margin-left: 40px;
+            color: white;
+        }
+
+        .fav-int, .improve-hint, .suggestion {
+            margin-left:40px;
+            margin-top: 50px;
+            height: 35px;
+            color: white;
+        }
+        .fav-select {
+            border-radius: 4px;
+            margin-left: 40px;
+            margin-top: 20px;
+            height: 35px;
+            width: 400px;
+            text-align: left;
+            padding-left: 4px;
+        }
+
+        .imporve-label {
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-left: 40px;
+            height: 35px;
+            width: 400px;
+            text-align: left;
+            padding-left: 4px;
+            color: white;
+        }
+
+        .comments {
+            padding: 4px 8px;
+            margin-top: 10px;
+            margin-left: 40px;
+            width: 400px;
+        }
+
+
 
         /* na {
             display: flex;
