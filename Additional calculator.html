@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #border {
+            width: 400px;
+            height: 700px;
+            margin: 0 auto;
+        }
+
+        #Calculator {
+            font-size: 50px;
+            height: 80px;
+            background-color: rgb(66, 120, 238);
+            color: white;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        #box {
+            width: 400px;
+            height: 620px;
+            border: 1px solid black;
+        }
+
+        #first,
+        #second {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 25px;
+        }
+
+        #first-value {
+            display: block;
+            width: 270px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second-value {
+            display: block;
+            width: 270px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #result {
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+            font-size: 25px;
+            background-color: rgb(66, 120, 238);
+            color: white;
+            width: 100px;
+        }
+
+        #final_result {
+            display: block;
+            width: 270px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="border">
+        <h3 id="Calculator">Calculator</h3>
+        <div id="box">
+            <h3 id="first">Enter First Value</h3>
+            <input type="number" id="first-value" />
+            <h3 id="second">Enter Second Value</h3>
+            <input type="number" id="second-value" />
+            <input type="button" value="Result" id="result">
+            <input type="text" id="final_result" />
+        </div>
+    </div>
+    <script>
+        let first = document.getElementById("first-value");
+        let second = document.getElementById("second-value");
+        let result = document.getElementById("result");
+        let final_result = document.getElementById("final_result");
+        result.onclick = function () {
+            // parseInt();------------------->Integers
+            // parseFloat();----------------->Decimals
+            let value = parseFloat(first.value) + parseFloat(second.value);
+            console.log(value);
+            final_result.value = value;
+        }
+    </script>
+</body>
+
+</html>
